@@ -67,3 +67,4 @@ def get_customer_cash(customer_list):
 #test 15 
 def remove_customer_cash(customer, cash_amount):
     customer["cash"] -= cash_amount
+    
