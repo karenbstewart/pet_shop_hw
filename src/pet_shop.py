@@ -54,5 +54,8 @@ def remove_pet_by_name(pet_list, animal_name):
             pet_list["pets"].remove(animal)
 
 
+#test 13 
+def add_pet_to_stock(pet_list, new_pet):
+    pet_list["pets"].append(new_pet)
 
 
