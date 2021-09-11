@@ -42,6 +42,11 @@ def get_pets_by_breed(pet_list, breed):
     return count 
 
 #test 10 
+def find_pet_by_name(pet_list, animal_name):
+    for animal in pet_list["pets"]:
+        if animal["name"] == animal_name:
+            return animal
+
 
 
 
