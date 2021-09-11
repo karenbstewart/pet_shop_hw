@@ -59,3 +59,7 @@ def add_pet_to_stock(pet_list, new_pet):
     pet_list["pets"].append(new_pet)
 
 
+#test 14
+def get_customer_cash(customer_list):
+    return customer_list["cash"]
+
