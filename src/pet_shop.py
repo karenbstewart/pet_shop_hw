@@ -87,6 +87,20 @@ def customer_can_afford_pet(customer, new_pet):
     
     return False
 
+#------ INTEGRATION TESTS ------
+
+def sell_pet_to_customer(pet_list, pet, customer):
+    add_pet_to_customer(customer, pet)
+    increase_pets_sold(pet_list, get_customer_pet_count(customer))
+    price_of_pet = pet["price"]
+    remove_customer_cash(customer, price_of_pet)
+    add_or_remove_cash(pet_list, price_of_pet)
+    
+
+
+
+
+
 
 
 
