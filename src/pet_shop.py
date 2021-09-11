@@ -63,3 +63,7 @@ def add_pet_to_stock(pet_list, new_pet):
 def get_customer_cash(customer_list):
     return customer_list["cash"]
 
+
+#test 15 
+def remove_customer_cash(customer, cash_amount):
+    customer["cash"] -= cash_amount
