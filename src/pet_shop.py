@@ -33,4 +33,15 @@ def get_stock_count(pet_list):
     animals_in_stock = len(pet_list["pets"])
     return animals_in_stock
 
+#test 8 and 9
+def get_pets_by_breed(pet_list, breed):
+    count = []
+    for num_of_breed_found in pet_list["pets"]:
+        if num_of_breed_found["breed"]== breed:
+            count.append(breed) 
+    return count 
+
+#test 10 
+
+
 
