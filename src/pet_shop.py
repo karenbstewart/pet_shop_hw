@@ -1,5 +1,4 @@
 # WRITE YOUR FUNCTIONS HERE
-import pdb
 
 #test 1 
 def get_pet_shop_name(pet_list):
@@ -9,11 +8,6 @@ def get_pet_shop_name(pet_list):
 #test 2 
 def get_total_cash(pet_list):
     return pet_list["admin"]["total_cash"]
-
-# does this call the amount rather than access the point in the actual list??
-# def add_or_remove_cash(pet_list, cash_amount):
-#     new_total = get_total_cash(pet_list) 
-#     new_total += cash_amount
 
 #tests 3 and 4     
 def add_or_remove_cash(pet_list, cash_amount):
@@ -83,7 +77,6 @@ def add_pet_to_customer(customer, new_pet):
     else:
         customer["pets"] = []
 
-#customer["pets"].append(new_pet)
 
 #----- OPTIONAL TESTS -------
 
@@ -97,35 +90,9 @@ def customer_can_afford_pet(customer, new_pet):
 
 #------ INTEGRATION TESTS ------
 
-
-# def sell_pet_to_customer(pet_list, pet, customer):
-#     add_pet_to_customer(customer, pet)
-#     increase_pets_sold(pet_list, get_customer_pet_count(customer))
-#     price_of_pet = pet["price"]
-#     remove_customer_cash(customer, price_of_pet)
-#     add_or_remove_cash(pet_list, price_of_pet)
-
-
-
-
-# def pet_price(pet_list, pet, pet_name):
-#         if find_pet_by_name(pet_list, pet_name) == pet_name:  
-#             return pet_list["pet"]["price"]
-# 
-def if_pet_none(pet):
-    if pet == None:
-        new_pet = {
-            "name": "",
-            "pet_type": "",
-            "breed": "",
-            "price": 0
-            }
-        return new_pet
-       
-
+#tests 21, 22, 23     
 
 def sell_pet_to_customer(pet_list, pet, customer):
-    #pdb.set_trace()
 
     if pet == None:
         return
@@ -142,7 +109,7 @@ def sell_pet_to_customer(pet_list, pet, customer):
         
         remove_customer_cash(customer, price_of_pet)
         add_or_remove_cash(pet_list, price_of_pet)
-    
+        
 
 
 
