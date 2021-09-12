@@ -72,10 +72,8 @@ def get_customer_pet_count(customers):
 
 #test 17 
 def add_pet_to_customer(customer, new_pet):
-    if new_pet != "":
-        customer["pets"].append(new_pet)
-    else:
-        customer["pets"] = []
+    customer["pets"].append(new_pet)
+
 
 
 #----- OPTIONAL TESTS -------
