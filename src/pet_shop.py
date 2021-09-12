@@ -130,6 +130,9 @@ def sell_pet_to_customer(pet_list, pet, customer):
     if pet == None:
         return
 
+    if customer["cash"] < pet["price"]:
+        return
+
     else:
         
         price_of_pet = pet["price"]
