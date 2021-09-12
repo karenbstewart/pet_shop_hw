@@ -47,6 +47,9 @@ def find_pet_by_name(pet_list, animal_name):
         if animal["name"] == animal_name:
             return animal
 
+    return None
+
+
 #test 12
 def remove_pet_by_name(pet_list, animal_name):
     for animal in pet_list["pets"]:
@@ -70,12 +73,17 @@ def remove_customer_cash(customer, cash_amount):
 
 #test 16 
 def get_customer_pet_count(customers):
+    
     return len(customers["pets"])
 
 #test 17 
 def add_pet_to_customer(customer, new_pet):
-    customer["pets"].append(new_pet)
+    if new_pet != "":
+        customer["pets"].append(new_pet)
+    else:
+        customer["pets"] = []
 
+#customer["pets"].append(new_pet)
 
 #----- OPTIONAL TESTS -------
 
@@ -89,12 +97,48 @@ def customer_can_afford_pet(customer, new_pet):
 
 #------ INTEGRATION TESTS ------
 
+
+# def sell_pet_to_customer(pet_list, pet, customer):
+#     add_pet_to_customer(customer, pet)
+#     increase_pets_sold(pet_list, get_customer_pet_count(customer))
+#     price_of_pet = pet["price"]
+#     remove_customer_cash(customer, price_of_pet)
+#     add_or_remove_cash(pet_list, price_of_pet)
+
+
+
+
+# def pet_price(pet_list, pet, pet_name):
+#         if find_pet_by_name(pet_list, pet_name) == pet_name:  
+#             return pet_list["pet"]["price"]
+# 
+def if_pet_none(pet):
+    if pet == None:
+        new_pet = {
+            "name": "",
+            "pet_type": "",
+            "breed": "",
+            "price": 0
+            }
+        return new_pet
+       
+
+
 def sell_pet_to_customer(pet_list, pet, customer):
-    add_pet_to_customer(customer, pet)
-    increase_pets_sold(pet_list, get_customer_pet_count(customer))
-    price_of_pet = pet["price"]
-    remove_customer_cash(customer, price_of_pet)
-    add_or_remove_cash(pet_list, price_of_pet)
+    #pdb.set_trace()
+
+    if pet == None:
+        return
+
+    else:
+        
+        price_of_pet = pet["price"]
+
+        add_pet_to_customer(customer, pet)
+        increase_pets_sold(pet_list, get_customer_pet_count(customer))
+        
+        remove_customer_cash(customer, price_of_pet)
+        add_or_remove_cash(pet_list, price_of_pet)
     
 
 
